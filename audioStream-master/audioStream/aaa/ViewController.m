@@ -12,6 +12,9 @@
 @interface ViewController ()
 
 @property (strong,nonatomic) AudioStreamer *streamer;
+
+// 测试属性，无用，可删除
+@property (strong,nonatomic) NSString *rain;
 @end
 
 @implementation ViewController
@@ -24,7 +27,6 @@
     [self createStreamer];
     [self.streamer start];
     
-//    [streamer stop];
 }
 
 
@@ -71,19 +73,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-    
-//	UIApplication *application = [UIApplication sharedApplication];
-//	if([application respondsToSelector:@selector(beginReceivingRemoteControlEvents)])
-//		[application beginReceivingRemoteControlEvents];
-//	[self becomeFirstResponder]; // this enables listening for events
-//	// update the UI in case we were in the background
-//	NSNotification *notification =
-//	[NSNotification
-//	 notificationWithName:ASStatusChangedNotification
-//	 object:self];
-//	[[NSNotificationCenter defaultCenter]
-//	 postNotification:notification];
-    
+        
 }
 
 - (void)playbackStateChanged
